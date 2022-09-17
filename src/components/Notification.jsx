@@ -12,14 +12,14 @@ const Notification = ({ item }) => {
         <div className="n-left">
           <img src={item.avatar} alt={item.username} className="avatar" />
           <div className="content">
-            <p className="body">
+            <div className="body">
               <div
                 dangerouslySetInnerHTML={{
                   __html: `${item.body}
               ${!item.read ? `<div class="unread-indicator" />` : ""}`,
                 }}
               />
-            </p>
+            </div>
             <p className="timestamp">{item.timestamp}</p>
             {item.message && <div className="message">{item.message}</div>}
           </div>
